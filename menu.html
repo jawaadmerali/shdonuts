@@ -42,6 +42,22 @@
             font-weight: 500;
         }*/
 
+        /* Column Width Control */
+        /* 1. Item Name: 40% width */
+        .menu-table th:nth-child(1), 
+        .menu-table td:nth-child(1) {
+            width: 40%; 
+            text-align: left;
+            padding-left: 0; /* maximize space */
+        }
+
+        /* 2. Prices: Split remaining 60% */
+        .menu-table th:not(:first-child), 
+        .menu-table td:not(:first-child) {
+            width: 20%;
+            text-align: center; /* Center prices for cleaner look */
+        }
+
         /* --- MOBILE FORCE FIT FIX --- */
         @media (max-width: 768px) {
             
