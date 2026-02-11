@@ -637,7 +637,7 @@ body {
 
 .menu-grid {
     display: grid;
-    gap: 24px;
+    gap: 36px;
 }
 
 .menu-category {
