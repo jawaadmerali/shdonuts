@@ -812,7 +812,7 @@ body {
 }
 
 /* ================================
-   Responsive Design
+   Responsive Design (FIXED FOR MOBILE TABLE)
    ================================ */
 @media (max-width: 768px) {
     .nav-links {
@@ -847,14 +847,49 @@ body {
     .contact-grid {
         grid-template-columns: 1fr;
     }
+
+    /* --- TABLE FORCE FIT --- */
+    .container {
+        padding: 0 10px; /* Gives table more width */
+    }
     
+    .menu-category {
+        padding: 15px; /* Removes white box padding so table fits */
+    }
+
     .menu-table {
-        font-size: 14px;
+        table-layout: fixed; /* STRICT width control */
+        width: 100%;
+        min-width: 0;
     }
     
     .menu-table th,
     .menu-table td {
-        padding: 10px 8px;
+        padding: 8px 2px; /* Very tight padding */
+        font-size: 13px;  /* Smaller font */
+        white-space: normal; /* Force wrapping */
+        word-wrap: break-word; /* Break long words if needed */
+        vertical-align: middle;
+    }
+    
+    /* Force Column Widths: Name 38%, Prices ~20% each */
+    .menu-table th:nth-child(1), 
+    .menu-table td:nth-child(1) {
+        width: 38%;
+        text-align: left;
+    }
+    
+    .menu-table th:nth-child(2), .menu-table td:nth-child(2),
+    .menu-table th:nth-child(3), .menu-table td:nth-child(3),
+    .menu-table th:nth-child(4), .menu-table td:nth-child(4) {
+        width: 20.6%;
+        text-align: center !important; /* Force center align for space */
+    }
+
+    /* Make price headers smaller to fit "1/2 Dz" */
+    .menu-table th.price-header {
+        font-size: 11px;
+        text-align: center !important;
     }
 }
 
