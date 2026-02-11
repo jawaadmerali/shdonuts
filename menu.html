@@ -5,34 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu | SH Donuts – East Austin</title>
     
-    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="d3eb969c-ef15-476b-801a-bbdd9d64682b.png">
     <link rel="apple-touch-icon" href="d3eb969c-ef15-476b-801a-bbdd9d64682b.png">
 
-    <!-- SEO -->
     <meta name="description" content="Check out the full menu of SH Donuts in East Austin – donuts, kolaches, breakfast tacos, cinnamon twists, and coffee.">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Menu | SH Donuts – East Austin">
     <meta property="og:description" content="Check out the full menu of SH Donuts – donuts, kolaches, breakfast tacos, cinnamon twists, and coffee.">
     <meta property="og:image" content="https://shdonuts.com/d3eb969c-ef15-476b-801a-bbdd9d64682b.png">
     <meta property="og:url" content="https://shdonuts.com/menu.html">
     <meta property="og:type" content="website">
 
-    <!-- Canonical -->
     <link rel="canonical" href="https://shdonuts.com/menu.html">
 
-    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Ensure the container fits the device */
+        .container {
+            max-width: 100%;
+            overflow-x: hidden; /* Prevents whole page horizontal scroll */
+        }
+
+        /* Mobile Responsive Table Fixes */
+        @media (max-width: 768px) {
+            
+            /* This wrapper allows the table to scroll horizontally independently */
+            .table-responsive {
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+                margin-bottom: 1.5rem;
+                border-right: 1px solid #f0f0f0; /* Visual hint */
+            }
+
+            .menu-table {
+                width: 100%;
+                /* Minimum width ensures columns don't get crushed. 
+                   User can scroll right to see the rest. */
+                min-width: 500px; 
+            }
+
+            .menu-table th, .menu-table td {
+                padding: 12px 8px; /* Slightly tighter padding */
+                font-size: 14px;   /* Slightly smaller text for better fit */
+                white-space: nowrap; /* Prevents weird wrapping of prices */
+            }
+
+            /* Allow the Item Name to wrap naturally so it doesn't take up too much width */
+            .menu-table td.item-name {
+                white-space: normal;
+                min-width: 120px;
+                position: sticky; /* Optional: keeps name visible while scrolling prices */
+                left: 0;
+                background-color: #fff; /* Needed if using sticky */
+                z-index: 10;
+            }
+            
+            .menu-table th.item-name {
+                position: sticky;
+                left: 0;
+                background-color: #fff;
+                z-index: 10;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
@@ -56,7 +100,6 @@
         </div>
     </nav>
 
-    <!-- Menu Hero -->
     <section class="page-hero">
         <div class="container">
             <h1 class="page-title">Our Menu</h1>
@@ -64,282 +107,286 @@
         </div>
     </section>
 
-    <!-- Menu Content -->
     <section class="menu-section">
         <div class="container">
             <div class="menu-grid">
-                <!-- Donuts -->
                 <div class="menu-category">
                     <h2 class="category-title">Donuts</h2>
-                    <table class="menu-table">
-                        <thead>
-                            <tr>
-                                <th class="item-name"></th>
-                                <th class="price-header">SOLO</th>
-                                <th class="price-header">1/2 Dz</th>
-                                <th class="price-header">1 Dz</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="item-name">Glazed</td>
-                                <td class="price">$1.29</td>
-                                <td class="price">$6.99</td>
-                                <td class="price">$13.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Iced</td>
-                                <td class="price">$1.29</td>
-                                <td class="price">$6.99</td>
-                                <td class="price">$13.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Old Fashion & Sprinkle</td>
-                                <td class="price">$1.39</td>
-                                <td class="price">$7.79</td>
-                                <td class="price">$14.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Donut Hole</td>
-                                <td class="price">$0.30</td>
-                                <td class="price">$1.50</td>
-                                <td class="price">$2.50</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Filling Donut</td>
-                                <td class="price">$1.59</td>
-                                <td class="price">$8.79</td>
-                                <td class="price">$16.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Long John</td>
-                                <td class="price">$2.69</td>
-                                <td class="price">$14.99</td>
-                                <td class="price">$27.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Apple Fritter</td>
-                                <td class="price">$2.69</td>
-                                <td class="price">$14.99</td>
-                                <td class="price">$27.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Cinnamon Roll</td>
-                                <td class="price">$2.69</td>
-                                <td class="price">$14.99</td>
-                                <td class="price">$27.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Cinnamon Twist</td>
-                                <td class="price">$2.69</td>
-                                <td class="price">$14.99</td>
-                                <td class="price">$27.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Bear Claw</td>
-                                <td class="price">$2.69</td>
-                                <td class="price">$14.99</td>
-                                <td class="price">$27.99</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="menu-table">
+                            <thead>
+                                <tr>
+                                    <th class="item-name"></th>
+                                    <th class="price-header">SOLO</th>
+                                    <th class="price-header">1/2 Dz</th>
+                                    <th class="price-header">1 Dz</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="item-name">Glazed</td>
+                                    <td class="price">$1.29</td>
+                                    <td class="price">$6.99</td>
+                                    <td class="price">$13.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Iced</td>
+                                    <td class="price">$1.29</td>
+                                    <td class="price">$6.99</td>
+                                    <td class="price">$13.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Old Fashion & Sprinkle</td>
+                                    <td class="price">$1.39</td>
+                                    <td class="price">$7.79</td>
+                                    <td class="price">$14.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Donut Hole</td>
+                                    <td class="price">$0.30</td>
+                                    <td class="price">$1.50</td>
+                                    <td class="price">$2.50</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Filling Donut</td>
+                                    <td class="price">$1.59</td>
+                                    <td class="price">$8.79</td>
+                                    <td class="price">$16.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Long John</td>
+                                    <td class="price">$2.69</td>
+                                    <td class="price">$14.99</td>
+                                    <td class="price">$27.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Apple Fritter</td>
+                                    <td class="price">$2.69</td>
+                                    <td class="price">$14.99</td>
+                                    <td class="price">$27.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Cinnamon Roll</td>
+                                    <td class="price">$2.69</td>
+                                    <td class="price">$14.99</td>
+                                    <td class="price">$27.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Cinnamon Twist</td>
+                                    <td class="price">$2.69</td>
+                                    <td class="price">$14.99</td>
+                                    <td class="price">$27.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Bear Claw</td>
+                                    <td class="price">$2.69</td>
+                                    <td class="price">$14.99</td>
+                                    <td class="price">$27.99</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
-                <!-- Croissant Sandwiches & Wraps -->
                 <div class="menu-category">
                     <h2 class="category-title">Croissant Sandwiches & Wraps</h2>
-                    <table class="menu-table">
-                        <thead>
-                            <tr>
-                                <th class="item-name"></th>
-                                <th class="price-header">SOLO</th>
-                                <th class="price-header">1/2 Dz</th>
-                                <th class="price-header">1 Dz</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="item-name">Croissant Sandwich (Bacon/Ham/Sausage Egg & Cheese)</td>
-                                <td class="price">$5.99</td>
-                                <td class="price">$31.99</td>
-                                <td class="price">$63.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Smoke Sausage Wrap</td>
-                                <td class="price">$2.49</td>
-                                <td class="price">$12.99</td>
-                                <td class="price">$25.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Sausage & Cheese with Jalapeño Wrap</td>
-                                <td class="price">$3.99</td>
-                                <td class="price">$20.99</td>
-                                <td class="price">$39.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Ham Swiss with Jalapeño Wrap</td>
-                                <td class="price">$3.99</td>
-                                <td class="price">$20.99</td>
-                                <td class="price">$39.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Turkey Swiss with Jalapeño Wrap</td>
-                                <td class="price">$3.99</td>
-                                <td class="price">$20.99</td>
-                                <td class="price">$39.99</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="menu-table">
+                            <thead>
+                                <tr>
+                                    <th class="item-name"></th>
+                                    <th class="price-header">SOLO</th>
+                                    <th class="price-header">1/2 Dz</th>
+                                    <th class="price-header">1 Dz</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="item-name">Croissant Sandwich (Bacon/Ham/Sausage Egg & Cheese)</td>
+                                    <td class="price">$5.99</td>
+                                    <td class="price">$31.99</td>
+                                    <td class="price">$63.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Smoke Sausage Wrap</td>
+                                    <td class="price">$2.49</td>
+                                    <td class="price">$12.99</td>
+                                    <td class="price">$25.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Sausage & Cheese with Jalapeño Wrap</td>
+                                    <td class="price">$3.99</td>
+                                    <td class="price">$20.99</td>
+                                    <td class="price">$39.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Ham Swiss with Jalapeño Wrap</td>
+                                    <td class="price">$3.99</td>
+                                    <td class="price">$20.99</td>
+                                    <td class="price">$39.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Turkey Swiss with Jalapeño Wrap</td>
+                                    <td class="price">$3.99</td>
+                                    <td class="price">$20.99</td>
+                                    <td class="price">$39.99</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
-                <!-- Kolaches -->
                 <div class="menu-category">
                     <h2 class="category-title">Kolaches</h2>
-                    <table class="menu-table">
-                        <thead>
-                            <tr>
-                                <th class="item-name"></th>
-                                <th class="price-header">SOLO</th>
-                                <th class="price-header">1/2 Dz</th>
-                                <th class="price-header">1 Dz</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="item-name">Sausage Cheese/Jalapeños</td>
-                                <td class="price">$2.49</td>
-                                <td class="price">$12.99</td>
-                                <td class="price">$25.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Sausage Pig</td>
-                                <td class="price">$2.49</td>
-                                <td class="price">$12.99</td>
-                                <td class="price">$25.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Jumbo Cheese/With Jalapeños</td>
-                                <td class="price">$3.99</td>
-                                <td class="price">$20.99</td>
-                                <td class="price">$39.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Boudin/With Jalapeños</td>
-                                <td class="price">$4.99</td>
-                                <td class="price">$26.99</td>
-                                <td class="price">$49.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Sausage, Eggs & Cheese/With Jalapeño</td>
-                                <td class="price">$3.99</td>
-                                <td class="price">$20.99</td>
-                                <td class="price">$39.99</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="menu-table">
+                            <thead>
+                                <tr>
+                                    <th class="item-name"></th>
+                                    <th class="price-header">SOLO</th>
+                                    <th class="price-header">1/2 Dz</th>
+                                    <th class="price-header">1 Dz</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="item-name">Sausage Cheese/Jalapeños</td>
+                                    <td class="price">$2.49</td>
+                                    <td class="price">$12.99</td>
+                                    <td class="price">$25.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Sausage Pig</td>
+                                    <td class="price">$2.49</td>
+                                    <td class="price">$12.99</td>
+                                    <td class="price">$25.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Jumbo Cheese/With Jalapeños</td>
+                                    <td class="price">$3.99</td>
+                                    <td class="price">$20.99</td>
+                                    <td class="price">$39.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Boudin/With Jalapeños</td>
+                                    <td class="price">$4.99</td>
+                                    <td class="price">$26.99</td>
+                                    <td class="price">$49.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Sausage, Eggs & Cheese/With Jalapeño</td>
+                                    <td class="price">$3.99</td>
+                                    <td class="price">$20.99</td>
+                                    <td class="price">$39.99</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
-                <!-- Kolaches / Sandwich -->
                 <div class="menu-category">
                     <h2 class="category-title">Kolaches / Sandwich</h2>
-                    <table class="menu-table">
-                        <thead>
-                            <tr>
-                                <th class="item-name"></th>
-                                <th class="price-header">SOLO</th>
-                                <th class="price-header">1/2 Dz</th>
-                                <th class="price-header">1 Dz</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="item-name">Sausage Only</td>
-                                <td class="price">$2.75</td>
-                                <td class="price">$14.99</td>
-                                <td class="price">$27.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Sausage/Bacon Egg & Cheese</td>
-                                <td class="price">$4.50</td>
-                                <td class="price">$24.99</td>
-                                <td class="price">$45.99</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="menu-table">
+                            <thead>
+                                <tr>
+                                    <th class="item-name"></th>
+                                    <th class="price-header">SOLO</th>
+                                    <th class="price-header">1/2 Dz</th>
+                                    <th class="price-header">1 Dz</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="item-name">Sausage Only</td>
+                                    <td class="price">$2.75</td>
+                                    <td class="price">$14.99</td>
+                                    <td class="price">$27.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Sausage/Bacon Egg & Cheese</td>
+                                    <td class="price">$4.50</td>
+                                    <td class="price">$24.99</td>
+                                    <td class="price">$45.99</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
-                <!-- Tacos -->
                 <div class="menu-category">
                     <h2 class="category-title">Tacos</h2>
-                    <table class="menu-table">
-                        <thead>
-                            <tr>
-                                <th class="item-name"></th>
-                                <th class="price-header">SOLO</th>
-                                <th class="price-header">1/2 Dz</th>
-                                <th class="price-header">1 Dz</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="item-name">Sausage Egg & Cheese</td>
-                                <td class="price">$3.50</td>
-                                <td class="price">$18.99</td>
-                                <td class="price">$36.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Potato Egg & Cheese</td>
-                                <td class="price">$3.50</td>
-                                <td class="price">$18.99</td>
-                                <td class="price">$36.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Bacon Egg & Cheese</td>
-                                <td class="price">$3.50</td>
-                                <td class="price">$18.99</td>
-                                <td class="price">$36.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Potato Bacon & Cheese</td>
-                                <td class="price">$3.50</td>
-                                <td class="price">$18.99</td>
-                                <td class="price">$36.99</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="menu-table">
+                            <thead>
+                                <tr>
+                                    <th class="item-name"></th>
+                                    <th class="price-header">SOLO</th>
+                                    <th class="price-header">1/2 Dz</th>
+                                    <th class="price-header">1 Dz</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="item-name">Sausage Egg & Cheese</td>
+                                    <td class="price">$3.50</td>
+                                    <td class="price">$18.99</td>
+                                    <td class="price">$36.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Potato Egg & Cheese</td>
+                                    <td class="price">$3.50</td>
+                                    <td class="price">$18.99</td>
+                                    <td class="price">$36.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Bacon Egg & Cheese</td>
+                                    <td class="price">$3.50</td>
+                                    <td class="price">$18.99</td>
+                                    <td class="price">$36.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Potato Bacon & Cheese</td>
+                                    <td class="price">$3.50</td>
+                                    <td class="price">$18.99</td>
+                                    <td class="price">$36.99</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
-                <!-- Drinks -->
                 <div class="menu-category">
                     <h2 class="category-title">Drinks</h2>
-                    <table class="menu-table">
-                        <thead>
-                            <tr>
-                                <th class="item-name"></th>
-                                <th class="price-header">S 12oz</th>
-                                <th class="price-header">M 16oz</th>
-                                <th class="price-header">L 20oz</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="item-name">Coffee</td>
-                                <td class="price">$2.29</td>
-                                <td class="price">$2.59</td>
-                                <td class="price">$2.99</td>
-                            </tr>
-                            <tr>
-                                <td class="item-name">Cappuccino (French Vanilla/Hot Chocolate/Mocha)</td>
-                                <td class="price">$2.79</td>
-                                <td class="price">$3.29</td>
-                                <td class="price">$3.69</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="menu-table">
+                            <thead>
+                                <tr>
+                                    <th class="item-name"></th>
+                                    <th class="price-header">S 12oz</th>
+                                    <th class="price-header">M 16oz</th>
+                                    <th class="price-header">L 20oz</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="item-name">Coffee</td>
+                                    <td class="price">$2.29</td>
+                                    <td class="price">$2.59</td>
+                                    <td class="price">$2.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="item-name">Cappuccino (French Vanilla/Hot Chocolate/Mocha)</td>
+                                    <td class="price">$2.79</td>
+                                    <td class="price">$3.29</td>
+                                    <td class="price">$3.69</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
-            <!-- CTA -->
             <div class="menu-cta">
                 <div class="menu-cta-card">
                     <p class="menu-cta-text"><strong>Prices subject to change.</strong> Large orders welcome! Call ahead for dozen orders to ensure availability.</p>
@@ -362,8 +409,7 @@
         </div>
     </section>
 
-        <!-- Footer -->
-    <footer class="footer">
+        <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
